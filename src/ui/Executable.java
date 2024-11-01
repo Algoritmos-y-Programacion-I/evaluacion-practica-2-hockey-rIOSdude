@@ -50,7 +50,7 @@ public class Executable {
 
 						break;
 					case 2:
-
+                        crearObjetosPrueba();
 						break;
 					case 3:
 
@@ -82,5 +82,11 @@ public class Executable {
         mainApp.run(flag);
 
     }
+
+    public void crearObjetosPrueba() {
+		// Ahora si debo referenciar a la controladora
+		controladora.crearObjetosDePrueba();
+		System.out.println("Objetos creados");
+	}
 
 }

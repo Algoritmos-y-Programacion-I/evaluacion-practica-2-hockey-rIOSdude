@@ -1,6 +1,6 @@
 package model;
 
-public class JugadorHockey extends Persona implements DesplazarseEnPistaConPalo {
+public class JugadorHockey extends Persona implements IDesplazarseEnPistaConPalo {
     protected String nombre;
     protected int numero;
     protected Posicion posicion;
@@ -25,5 +25,11 @@ public class JugadorHockey extends Persona implements DesplazarseEnPistaConPalo 
         } else {
             return nombre + " es el portero y no se desplaza más allá de media pista.";
         }
+    }
+
+    @Override
+    String pasaDiscoA(String jugadorUno, String jugadorDos) {
+        String mensaje = jugadorUno + " se la pasa a " + jugadorDos;
+        return mensaje;
     }
 }
